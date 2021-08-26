@@ -1,0 +1,39 @@
+.container {
+    background-image: url('../../images/Bg.png');
+    height: 805px;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 30px;
+    text-align: center;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 200px;
+}
+
+.card p {
+    font-weight: 700;
+    font-size: 20px;
+}

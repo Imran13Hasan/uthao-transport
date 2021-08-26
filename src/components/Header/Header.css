@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.login {
+    padding: 10px 20px;
+    background: #ff5845;
+    border-radius: 5px;
+    color: white;
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.pro-pic img {
+    width: 60%;
+    border: 3px solid #b7ebf9;
+    border-radius: 50%;
+}
