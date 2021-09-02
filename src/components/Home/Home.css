@@ -1,12 +1,18 @@
 .container {
     background-image: url('../../images/Bg.png');
-    height: 805px;
+    height: 820px;
     width: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
+/* 
 .card-container {
     display: flex;
     flex-direction: row;
@@ -36,4 +42,4 @@
 .card p {
     font-weight: 700;
     font-size: 20px;
-}
+} */

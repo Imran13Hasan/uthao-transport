@@ -24,7 +24,7 @@ form input{
     border-radius: 5px;
 }
 .map{
-    text-align: right;
+    width: 1300px;
 }
 .search-btn{
     background-color: #ff5845;

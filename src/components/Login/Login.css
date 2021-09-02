@@ -28,6 +28,7 @@
     background-color: #ff5845;
     font-size: 15px;
     color: white;
+    cursor: pointer;
 }
 .have-account{
     font-weight: 400;

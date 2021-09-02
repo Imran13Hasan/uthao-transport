@@ -43,7 +43,7 @@ const Header = () => {
                             <img src={loggedInUser.photo} alt="" />
                         </div>
                     }
-                    <h3 style={{color: 'gray'}}>{loggedInUser.name}</h3>
+                    <h3 style={{ color: 'gray' }}>{loggedInUser.name}</h3>
                 </div>
             </div>
         </div>

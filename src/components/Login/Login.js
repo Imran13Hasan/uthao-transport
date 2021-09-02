@@ -25,8 +25,10 @@ const Login = () => {
         password: '',
         photo: '',
         success: false,
-        error: ''
+        error: '',
+        error_password: false
     })
+    console.log(user);
 
     let history = useHistory();
     let location = useLocation();
@@ -72,16 +74,15 @@ const Login = () => {
         }
     }
 
+
     const handleSubmit = (e) => {
         if (newUser && user.email && user.password) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
                 .then((res) => {
-                    console.log(res)
                     const newUserInfo = { ...user };
                     newUserInfo.success = true;
                     newUserInfo.isSignedIn = true;
                     newUserInfo.error = '';
-                    // setNewUser(newUserInfo);
                     setLoggedInUser(newUserInfo)
                     handleUpdateUserName(user.name)
                     history.replace(from);
@@ -96,12 +97,10 @@ const Login = () => {
         if (!newUser && user.email && user.password) {
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
                 .then((res) => {
-                    console.log(res.user)
                     const newUserInfo = { ...user };
                     newUserInfo.isSignedIn = true;
                     newUserInfo.success = true;
                     newUserInfo.error = '';
-                    // setUser(newUserInfo);
                     setLoggedInUser(newUserInfo)
                     history.replace(from);
                 })
@@ -126,6 +125,7 @@ const Login = () => {
         });
     }
 
+
     return (
         <div className="login-container">
             <div className="login-form">
@@ -140,6 +140,7 @@ const Login = () => {
                     {newUser && <input type="text" onBlur={handleGetInput} name="name" required placeholder="Name" id="" />}
                     <input type="email" onBlur={handleGetInput} name="email" required placeholder="Email" id="" />
                     <input type="password" onBlur={handleGetInput} name="password" required placeholder="Password" id="" />
+                    {/* {user.error_password && <small><p style={{ color: 'red' }}>*Invalid Password! Please enter at least 6 characters including 1 digit</p></small>} */}
                     <input type="password" onBlur={handleGetInput} name="confirm_password" placeholder="Confirm Password" id="" />
                     <input className="submit-btn" type="submit" value={newUser ? 'Sign Up' : 'Sign In'} />
                     <p> {newUser ? "Already have an account?" : "Don't have an account?"} <Link onClick={() => setNewUser(!newUser)}>{newUser ? "Sign In" : "Sign Up"}</Link></p>

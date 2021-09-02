@@ -1,17 +1,21 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 import './Destination.css'
-import map from '../../images/Map.png'
+import Map from '../Map/Map';
 
-const Destination = () => {
+const Destination = (props) => {
+    const location = {
+        address: `Imran Hasan's Home, Araihazar, Narayangonj, Dhaka, Bangladesh.`,
+        lat: 23.79167628264851,
+        lng: 90.65373869924521
+    }
     return (
         <div className="destination-container">
             <div className="destination-box">
-                <form className="destination-form" action=""> 
-                    <p>Pick From</p>
+                <form className="destination-form" action="">
+                    <p>Pick From:</p>
                     <input type="text" name="from" id="" />
                     <br />
-                    <p>Pick To</p>
+                    <p>Pick To:</p>
                     <input type="text" name="to" id="" />
                     <br />
                     <br />
@@ -19,7 +23,7 @@ const Destination = () => {
                 </form>
             </div>
             <div className="map">
-                <img src={map} alt="" />
+                <Map location={location} zoomLevel={17} />
             </div>
         </div>
     );

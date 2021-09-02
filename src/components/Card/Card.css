@@ -1,0 +1,19 @@
+.card-container{
+    display: flex;
+    width: 300px;
+    height: 280px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background-color: white;
+    border-radius: 15px;;
+}
+.card-container h2{
+    /* text-decoration: none; */
+}
+.card-container img{
+    width: 50%;
+}
